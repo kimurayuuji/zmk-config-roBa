@@ -85,8 +85,6 @@
 &mt LEFT_SHIFT Z  &kp X      &kp C         &kp V          &kp B  &kp F13        &kp GRAVE        &kp N                  &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp ESC           &kp LCTRL  &kp LEFT_GUI  &kp RIGHT_ALT  &mo 1  &lt 2 TAB      &mt RCTRL ENTER  &mt RIGHT_SHIFT SPACE                             &mo 5
             >;
-
-            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_OUT C_AC_ZOOM_IN>;
         };
 
         allow-operation {
@@ -127,10 +125,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &kp C_AC_ZOOM_IN   &trans        &mkp MB1      &mkp MB3      &mkp MB2      &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp C_AC_ZOOM_OUT  &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4           &mkp MB5                                                &trans
+&trans  &trans  &trans  &trans  &trans                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &bt BT_CLR  &trans        &mkp MB1      &mkp MB3      &mkp MB2      &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans      &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4    &mkp MB5                                                &trans
             >;
         };
 
