@@ -49,9 +49,14 @@
             key-positions = <0 1>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
+        f13 {
+            bindings = <&kt F13>;
+            key-positions = <13 12>;
+        };
+
+        f14 {
+            bindings = <&kp F14>;
+            key-positions = <12 11>;
         };
     };
 
@@ -119,7 +124,7 @@
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &to 0   &trans      &trans  &trans                                &trans
             >;
         };
 
