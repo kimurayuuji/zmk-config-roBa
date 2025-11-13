@@ -8,16 +8,6 @@
     quick-tap-ms = <0>;
 };
 
-&mmv {
-    x-input-code = <2>;
-    y-input-code = <2>;
-};
-
-&msc {
-    x-input-code = <(-1)>;
-    y-input-code = <(-1)>;
-};
-
 &trackball {
     automouse-layer = <4>;
     scroll-layers = <5>;
