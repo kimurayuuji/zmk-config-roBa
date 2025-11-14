@@ -72,11 +72,12 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&to 0 &macro_param_1to1>,
                 <&macro_press>,
-                <&mo MACRO_PLACEHOLDER &macro_param_1to1>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_release>,
-                <&kp MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&to 0>;
 
             label = "TO_LAYER0_HOLD_SOME_LAYER";
         };
