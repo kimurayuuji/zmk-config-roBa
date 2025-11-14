@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <to 1>,
+                <&to 1>,
                 <&macro_release &to 0>;
 
             label = "LAYER0_1";
