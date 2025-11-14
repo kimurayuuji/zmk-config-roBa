@@ -75,9 +75,7 @@
                 <&macro_press>,
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_release>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&to 0>;
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "TO_LAYER0_HOLD_SOME_LAYER";
         };
