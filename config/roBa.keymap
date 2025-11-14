@@ -57,6 +57,21 @@
             bindings = <&kp F14>;
             key-positions = <12 11>;
         };
+
+        l-click {
+            bindings = <&mkp LCLK>;
+            key-positions = <18 19>;
+        };
+
+        r-click {
+            bindings = <&mkp MB2>;
+            key-positions = <19 20>;
+        };
+
+        m-click {
+            bindings = <&mkp MB3>;
+            key-positions = <18 20>;
+        };
     };
 
     macros {
