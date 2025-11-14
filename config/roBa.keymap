@@ -29,7 +29,7 @@
         compatible = "zmk,combos";
 
         quate {
-            bindings = <&kp SINGLE_QUOTE>;
+            bindings = <&lt 4 SQT>;
             key-positions = <21 20>;
         };
 
