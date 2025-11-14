@@ -74,7 +74,11 @@
             bindings =
                 <&to 0 &macro_param_1to1>,
                 <&macro_press>,
-                <&mo MACRO_PLACEHOLDER>;
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&to 0>,
+                <&macro_release>,
+                <&to 0>;
 
             label = "NEW_MACRO";
         };
