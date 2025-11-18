@@ -101,6 +101,22 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        none_layer: none_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NONE_LAYER";
+            bindings = <&none>, <&mo>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        layer1_win: layer1_win {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER1_WIN";
+            #binding-cells = <0>;
+            bindings = <&none_layer 0 1>, <&kp LEFT_GUI>;
+        };
     };
 
     keymap {
@@ -108,10 +124,10 @@
 
         default_layer {
             bindings = <
-&mt LEFT_ALT Q    &kp W      &kp E         &kp R          &kp T                                  &kp Y                  &kp U  &kp I      &kp O    &lt 4 P
-&mt LCTRL A       &kp S      &kp D         &kp F          &kp G  &kp F14        &kp BACKSPACE    &kp H                  &kp J  &kp K      &kp L    &lt 3 SEMI
-&mt LEFT_SHIFT Z  &kp X      &kp C         &kp V          &kp B  &kp F13        &kp GRAVE        &kp N                  &kp M  &kp COMMA  &kp DOT  &lt 4 SLASH
-&kp ESC           &kp LCTRL  &kp LEFT_GUI  &kp RIGHT_ALT  &mo 1  &lt 2 TAB      &mt RCTRL ENTER  &mt RIGHT_SHIFT SPACE                             &mo 4
+&mt LEFT_ALT Q    &kp W      &kp E         &kp R          &kp T                                        &kp Y                  &kp U  &kp I      &kp O    &lt 4 P
+&mt LCTRL A       &kp S      &kp D         &kp F          &kp G        &kp F14        &kp BACKSPACE    &kp H                  &kp J  &kp K      &kp L    &lt 3 SEMI
+&mt LEFT_SHIFT Z  &kp X      &kp C         &kp V          &kp B        &kp F13        &kp GRAVE        &kp N                  &kp M  &kp COMMA  &kp DOT  &lt 4 SLASH
+&kp ESC           &kp LCTRL  &kp LEFT_GUI  &kp RIGHT_ALT  &layer1_win  &lt 2 TAB      &mt RCTRL ENTER  &mt RIGHT_SHIFT SPACE                             &mo 4
             >;
         };
 
