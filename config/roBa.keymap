@@ -115,7 +115,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER1_WIN";
             #binding-cells = <0>;
-            bindings = <&none_layer 0 1>, <&kp LEFT_GUI>;
+            bindings = <&mo 1>, <&kp LEFT_GUI>;
         };
     };
 
