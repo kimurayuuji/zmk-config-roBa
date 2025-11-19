@@ -108,6 +108,15 @@
             #binding-cells = <0>;
             bindings = <&mo 1>, <&kp LEFT_GUI>;
         };
+
+        kp_msc: kp_msc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_MSC";
+            bindings = <&kp>, <&msc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -142,19 +151,19 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                        &trans    &trans    &trans    &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &mkp MB1  &mkp MB3  &layer_mkp 4 MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans    &trans    &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4  &mkp MB5                                        &trans
+&trans  &trans  &trans  &trans  &trans                        &trans    &kp_msc RCTRL SCRL_DOWN  &kp_msc RCTRL SCRL_UP  &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &mkp MB1                 &mkp MB3               &layer_mkp 4 MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans                   &trans                 &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4  &mkp MB5                                                                    &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                          &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &bt BT_CLR  &trans          &mkp MB1      &mkp MB3      &mkp MB2      &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans      &msc SCRL_DOWN  &msc SCRL_UP  &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4    &mkp MB5                                                  &trans
+&trans  &trans  &trans  &trans  &trans                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &bt BT_CLR  &trans        &mkp MB1      &mkp MB3      &mkp MB2      &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans      &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4    &mkp MB5                                                &trans
             >;
         };
     };
