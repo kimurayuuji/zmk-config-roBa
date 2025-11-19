@@ -81,20 +81,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        ctrl_scroll: ctrl_scroll {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&macro_param_1to1 &msc MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>;
-
-            label = "CTRL_SCROLL";
-        };
     };
 
     behaviors {
@@ -165,10 +151,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                          &bt BT_SEL 0          &bt BT_SEL 1            &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &bt BT_CLR  &trans                &mkp MB1                &mkp MB3      &mkp MB2      &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans      &ctrl_scroll SCRL_UP  &ctrl_scroll SCRL_DOWN  &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4    &mkp MB5                                                                  &trans
+&trans  &trans  &trans  &trans  &trans                          &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &bt BT_CLR  &trans          &mkp MB1      &mkp MB3      &mkp MB2      &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans      &msc SCRL_DOWN  &msc SCRL_UP  &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4    &mkp MB5                                                  &trans
             >;
         };
     };
