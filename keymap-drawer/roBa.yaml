@@ -2,7 +2,7 @@ layout: {zmk_keyboard: roBa}
 layers:
   default:
   - {t: Q, h: LEFT ALT}
-  - W
+  - {t: W, h: LEFT GUI}
   - E
   - R
   - T
@@ -10,7 +10,7 @@ layers:
   - U
   - I
   - O
-  - {t: P, h: SCROLL}
+  - P
   - {t: A, h: LCTRL}
   - S
   - D
@@ -24,7 +24,7 @@ layers:
   - L
   - {t: ;, h: MOUSE}
   - {t: Z, h: LEFT SHIFT}
-  - X
+  - {t: X, h: WINDOW}
   - C
   - V
   - B
@@ -39,7 +39,7 @@ layers:
   - LCTRL
   - LEFT GUI
   - RIGHT ALT
-  - {t: LEFT GUI, h: allow-operation}
+  - allow-operation
   - {t: TAB, h: function}
   - {t: ENTER, h: RCTRL}
   - {t: SPACE, h: RIGHT SHIFT}
@@ -139,8 +139,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -186,7 +186,7 @@ layers:
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
-  - {t: BT, h: '4', type: held}
+  - {t: BT, h: '4'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -210,7 +210,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -219,6 +219,50 @@ layers:
   - {t: ▽, type: trans}
   - '&mkp MB4'
   - '&mkp MB5'
+  - {t: ▽, type: trans}
+  WINDOW:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+Gui+T
+  - Gui+D
+  - Gui+TAB
+  - Gui+T
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+LEFT
+  - Gui+DOWN ARROW
+  - Gui+UP
+  - Gui+RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
 - p: [21, 20]
@@ -235,7 +279,10 @@ combos:
   k: F14
 - p: [18, 19]
   k: '&mkp LCLK'
+  l: [MOUSE, default]
 - p: [19, 20]
   k: '&mkp MB2'
-- p: [18, 20]
+  l: [MOUSE, default]
+- p: [20, 18]
   k: '&mkp MB3'
+  l: [MOUSE, default]
