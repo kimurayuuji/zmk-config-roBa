@@ -5,8 +5,10 @@
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <0>;
+    quick-tap-ms = <150>;
 };
+
+&lt { quick-tap-ms = <150>; };
 
 &trackball {
     scroll-layers = <4>;
