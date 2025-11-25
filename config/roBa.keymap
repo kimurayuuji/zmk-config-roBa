@@ -86,6 +86,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        toggle_and_kp: toggle_win_kp {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1 &toggle_on MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+            label = "TOGGLE_WIN_KP";
+        };
     };
 
     behaviors {
@@ -131,6 +138,19 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
+        };
+
+        toggle_on: toggle_on {
+            compatible = "zmk,behavior-key-toggle";
+            label = "TOGGLE_ON";
+            #binding-cells = <1>;
+        };
+
+        toggle_off: toggle_off {
+            compatible = "zmk,behavior-key-toggle";
+            label = "TOGGLE_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
         };
     };
 
@@ -184,10 +204,10 @@
 
         WINDOW {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &kp LS(LG(T))  &kp LG(D)           &kp LG(TAB)  &kp LG(T)      &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT)   &kp LG(DOWN_ARROW)  &kp LG(UP)   &kp LG(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans         &trans              &trans       &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                         &trans
+&trans  &trans  &trans  &trans  &trans                                    &trans                        &kp LG(D)                           &kp LG(TAB)                       &trans                         &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans                &toggle_and_kp LEFT_WIN LEFT  &toggle_and_kp LEFT_GUI DOWN_ARROW  &toggle_and_kp LEFT_GUI UP_ARROW  &toggle_and_kp LEFT_GUI RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans                &kp LG(HOME)                  &kp LS(LG(T))                       &kp LG(T)                         &trans                         &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &toggle_off LEFT_GUI  &toggle_off LEFT_GUI                                                                                                               &trans
             >;
         };
     };
